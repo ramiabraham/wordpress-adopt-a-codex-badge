@@ -62,13 +62,14 @@ class AdoptACodexBadge extends WP_Widget
     if (!empty($adopt_a_codex_username));
       
     
-    // Adopt A codex badge image wrapper. Pretty simple but it does the job.
+    // Adopt A Codex Badge image wrapper. Pretty simple but it does the job.
     echo '<a href="http://codex.wordpress.org/User:';
     echo $adopt_a_codex_username;
     echo '">';
     echo '<img title="Click here to see my WordPress Codex profile" alt="link to WordPress Adopt-A-Codex Initiative" src="' . plugins_url( '/adopt-a-codex-badge.png' , __FILE__ ) . '" >';
     echo '</a>';
     echo '<br />';
+    // Should probably move the include to the top, and disable on admin screens
     include_once(ABSPATH.WPINC.'/feed.php');
     echo '<br />';
     $rss = fetch_feed('http://codex.wordpress.org/index.php?title=Special:Contributions&feed=rss&target=' . $adopt_a_codex_username);
@@ -79,7 +80,7 @@ class AdoptACodexBadge extends WP_Widget
     echo '<ul>';
     	if ($maxitems == 0) echo '<li>I haven\'t had a chance to get started yet.</li>';
 	    	else
-	    		// Loop through Codex feed items and display each item as a hyperlink.
+	    		// Loop through Codex feed items and display each item as an electronic internets hyperlink.
 	    			foreach ( $rss_items as $item ) :
 	    			echo '<li>';
 	    			echo '<a href="';
