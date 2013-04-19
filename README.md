@@ -1,6 +1,8 @@
 wordpress-adopt-a-codex-badge
 =============================
 
+Demo: http://make.rami.nu/ (In the sidebar)
+
 Display a simple widget in your sidebar to show your involvement in the WordPress Codex.
 
 A very simple widget that displays a badge in any widgetized area, and links to your Codex user page.
