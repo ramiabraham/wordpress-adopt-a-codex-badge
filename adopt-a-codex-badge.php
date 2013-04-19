@@ -68,6 +68,29 @@ class AdoptACodexBadge extends WP_Widget
     echo '">';
     echo '<img title="Click here to see my WordPress Codex profile" alt="link to WordPress Adopt-A-Codex Initiative" src="' . plugins_url( '/adopt-a-codex-badge.png' , __FILE__ ) . '" >';
     echo '</a>';
+    echo '<br />';
+    include_once(ABSPATH.WPINC.'/feed.php');
+    echo '<br />';
+    $rss = fetch_feed('http://codex.wordpress.org/index.php?title=Special:Contributions&feed=rss&target=');
+    echo $adopt_a_codex_username;
+    echo'\'s recent activity:';
+    $maxitems = $rss->get_item_quantity(5);
+    $rss_items = $rss->get_items(0, $maxitems);
+    echo '<ul>';
+    	if ($maxitems == 0) echo '<li>I haven\'t had a chance to get started yet.</li>';
+	    	else
+	    		// Loop through Codex feed items and display each item as a hyperlink.
+	    			foreach ( $rss_items as $item ) :
+	    			echo '<li>';
+	    			echo '<a href="';
+	    			echo $item->get_permalink();
+	    			echo '" title="';
+	    			echo 'Posted '.$item->get_date('j F Y | g:i a');
+	    			echo '">';
+	    			echo $item->get_title();
+	    			echo '</li>';
+	    			endforeach;
+	    			echo '</ul>';   			
   }
  
 }
