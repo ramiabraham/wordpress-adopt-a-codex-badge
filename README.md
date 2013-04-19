@@ -10,7 +10,7 @@ Codex activity.
 
 ============================
 
-You can get involved with the WordPress Codex here: make.wordpress.org/docs
+Get involved with the WordPress Codex here: http://make.wordpress.org/docs
 The WordPress Codex: http://codex.wordpress.org
 
 =============================
