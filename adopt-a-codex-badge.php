@@ -31,9 +31,10 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  
 class AdoptACodexBadge extends WP_Widget
 {
+
   function AdoptACodexBadge()
   {
-    $widget_ops = array('classname' => 'AdoptACodexBadge', 'description' => 'Shows your awesome involvement in the WordPress Adopt-A-Codex initiative.' );
+    $widget_ops = array('classname' => 'AdoptACodexBadge', 'description' => 'Shows your involvement in the WordPress Adopt-A-Codex initiative.' );
     $this->WP_Widget('AdoptACodexBadge', 'Adopt A Codex Badge', $widget_ops);
   }
  
@@ -42,7 +43,7 @@ class AdoptACodexBadge extends WP_Widget
     $instance = wp_parse_args( (array) $instance, array( 'adopt_a_codex_username' => '' ) );
     $adopt_a_codex_username = $instance['adopt_a_codex_username'];
 ?>
-  <p><label for="<?php echo $this->get_field_id('adopt_a_codex_username'); ?>">Your Codex/Wordpress.org username: <input class="widefat" id="<?php echo $this->get_field_id('adopt_a_codex_username'); ?>" name="<?php echo $this->get_field_name('adopt_a_codex_username'); ?>" type="text" value="<?php echo attribute_escape($adopt_a_codex_username); ?>" /></label></p>
+  <p><label for="<?php echo $this->get_field_id('adopt_a_codex_username'); ?>">Your Codex or Wordpress.org username: <input class="widefat" id="<?php echo $this->get_field_id('adopt_a_codex_username'); ?>" name="<?php echo $this->get_field_name('adopt_a_codex_username'); ?>" type="text" value="<?php echo attribute_escape($adopt_a_codex_username); ?>" /></label></p>
 <?php
   }
  
@@ -62,14 +63,13 @@ class AdoptACodexBadge extends WP_Widget
     if (!empty($adopt_a_codex_username));
       
     
-    // Adopt A Codex Badge image wrapper. Pretty simple but it does the job.
-    echo '<a href="http://codex.wordpress.org/User:';
+    // Adopt A codex badge image wrapper. Pretty simple but it does the job.
+    echo '<div class="adopt-a-codex-badge-background"><a href="http://codex.wordpress.org/User:';
     echo $adopt_a_codex_username;
-    echo '">';
-    echo '<img title="Click here to see my WordPress Codex profile" alt="link to WordPress Adopt-A-Codex Initiative" src="' . plugins_url( '/adopt-a-codex-badge.png' , __FILE__ ) . '" >';
-    echo '</a>';
-    echo '<br />';
-    // Should probably move the include to the top, and disable on admin screens
+    echo '"><h2>';
+    echo $adopt_a_codex_username;
+    echo '</h2></a>';
+    echo '</div><br />';
     include_once(ABSPATH.WPINC.'/feed.php');
     echo '<br />';
     $rss = fetch_feed('http://codex.wordpress.org/index.php?title=Special:Contributions&feed=rss&target=' . $adopt_a_codex_username);
@@ -80,7 +80,7 @@ class AdoptACodexBadge extends WP_Widget
     echo '<ul>';
     	if ($maxitems == 0) echo '<li>I haven\'t had a chance to get started yet.</li>';
 	    	else
-	    		// Loop through Codex feed items and display each item as an electronic internets hyperlink.
+	    		// Loop through Codex feed items and display each item as a hyperlink.
 	    			foreach ( $rss_items as $item ) :
 	    			echo '<li>';
 	    			echo '<a href="';
@@ -95,4 +95,19 @@ class AdoptACodexBadge extends WP_Widget
   }
  
 }
-add_action( 'widgets_init', create_function('', 'return register_widget("AdoptACodexBadge");') );?>
+add_action( 'widgets_init', create_function('', 'return register_widget("AdoptACodexBadge");') );
+
+	function adopt_a_codex_badge_style()  
+{ 
+  // Register the style for the codex badge background 
+  // (First the unique name for the style (custom-style) then the src, 
+  // then dependencies and ver no. and media type)
+  wp_register_style( 'adopt_a_codex_badge_style', 
+    plugins_url() . '/adopt-a-codex-badge/style.css', 
+    array(), 
+    '20130420', 
+    'all' );
+
+  wp_enqueue_style( 'adopt_a_codex_badge_style' );
+}
+add_action('wp_enqueue_scripts', 'adopt_a_codex_badge_style');?>
