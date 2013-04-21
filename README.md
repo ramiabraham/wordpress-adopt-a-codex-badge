@@ -1,4 +1,4 @@
-wordpress-adopt-a-codex-badge
+WordPress Adopt-A-Codex Badge
 =============================
 
 Demo: http://make.rami.nu/
