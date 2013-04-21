@@ -2,9 +2,9 @@
 /*
 Plugin Name: Adopt A Codex Badge
 Plugin URI: http://ramiabraham.com/adopt-a-codex-badge
-Description: Shows your involvement in the WordPress Adopt A Codex initiative!
-Version: 1.0
-Author: Rami Abraham, idea by Siobhan
+Description: Shows your involvement in the Adopt A Codex initiative!
+Version: 1.1
+Author: Rami Abraham, Siobhan P McKeown
 Author URI: http://make.wordpress.org/docs
 Text Domain: adopt-a-codex-badge-widget
 Domain Path: /lang/
