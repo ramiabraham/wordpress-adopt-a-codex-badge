@@ -11,6 +11,7 @@ Codex activity.
 ============================
 
 Get involved with the WordPress Codex here: http://make.wordpress.org/docs
+
 The WordPress Codex: http://codex.wordpress.org
 
 Further ideas:
