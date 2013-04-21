@@ -1,7 +1,7 @@
 wordpress-adopt-a-codex-badge
 =============================
 
-Demo: http://make.rami.nu/ (In the sidebar)
+Demo: http://make.rami.nu/
 
 Display a simple widget in your sidebar to show your involvement in the WordPress Codex.
 
@@ -13,15 +13,26 @@ Codex activity.
 Get involved with the WordPress Codex here: http://make.wordpress.org/docs
 The WordPress Codex: http://codex.wordpress.org
 
-=============================
 Further ideas:
+=============================
 
 *Options to use different badge(s).
 
 *Option to disable feed
 
-*Disable WPINC/.feed.php include_once on admin screens, possibly use alternate feed method
+Changelog:
+=============================
 
-*Incorporating the Username into the image might be a good idea.
+Version 1.1:
 
-*Some UI enhancement, if desired. Pretty simple right now with just the image and feed.
+*Added RSS feed
+
+*New badge. Added small stylesheet via wp_register_style
+
+*Set badge image as div background
+
+
+Version 1.0:
+
+*Initial release
+
