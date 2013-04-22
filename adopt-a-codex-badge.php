@@ -99,9 +99,7 @@ add_action( 'widgets_init', create_function('', 'return register_widget("AdoptAC
 
 	function adopt_a_codex_badge_style()  
 { 
-  // Register the style for the codex badge background 
-  // (First the unique name for the style (custom-style) then the src, 
-  // then dependencies and ver no. and media type)
+  // Register the style for the codex badge background
   wp_register_style( 'adopt_a_codex_badge_style', 
     plugins_url() . '/adopt-a-codex-badge/style.css', 
     array(), 
