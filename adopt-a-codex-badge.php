@@ -30,9 +30,9 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 if ( ! class_exists( 'Adopt_A_Codex_Badge' ) ) {
 class Adopt_A_Codex_Badge extends WP_Widget {
 
-	function AdoptACodexBadge() {
-		$widget_ops = array('classname' => 'AdoptACodexBadge', 'description' => 'Shows your involvement in the WordPress Adopt-A-Codex initiative.' );
-		$this->WP_Widget('AdoptACodexBadge', 'Adopt A Codex Badge', $widget_ops);
+	function Adopt_A_Codex_Badge() {
+		$widget_ops = array('classname' => 'Adopt_A_Codex_Badge', 'description' => 'Shows your involvement in the WordPress Adopt-A-Codex initiative.' );
+		$this->WP_Widget( 'Adopt_A_Codex_Badge', 'Adopt A Codex Badge', $widget_ops );
 	}
  
 	function form( $instance ) {
@@ -93,12 +93,12 @@ class Adopt_A_Codex_Badge extends WP_Widget {
 } // Adopt_A_Codex_Badge
 } // exists check
 
-add_action( 'widgets_init', create_function('', 'return register_widget("AdoptACodexBadge");' ) );
+add_action( 'widgets_init', create_function( '', 'return register_widget( "Adopt_A_Codex_Badge" );' ) );
 
 	function adopt_a_codex_badge_style() { 
 	// Register the style for the codex badge background
 	wp_register_style( 'adopt_a_codex_badge_style', 
-		sprintf( '%s/adopt-a-codex-badge/style.css', plugins_url() ), 
+		esc_url( sprintf( '%s/adopt-a-codex-badge/style.css', plugins_url() ) ),
 		array(), 
 		'20130420', 
 		'all' );
