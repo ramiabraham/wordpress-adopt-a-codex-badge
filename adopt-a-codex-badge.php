@@ -31,7 +31,7 @@ if ( ! class_exists( 'Adopt_A_Codex_Badge' ) ) {
 class Adopt_A_Codex_Badge extends WP_Widget {
 
 	function Adopt_A_Codex_Badge() {
-		$widget_ops = array('classname' => 'Adopt_A_Codex_Badge', 'description' => 'Shows your involvement in the WordPress Adopt-A-Codex initiative.' );
+		$widget_ops = array( 'classname' => 'Adopt_A_Codex_Badge', 'description' => __( 'Shows your involvement in the WordPress Adopt-A-Codex initiative.', 'adopt-a-codex-badge' ) );
 		$this->WP_Widget( 'Adopt_A_Codex_Badge', 'Adopt A Codex Badge', $widget_ops );
 	}
  
@@ -40,7 +40,7 @@ class Adopt_A_Codex_Badge extends WP_Widget {
 		$adopt_a_codex_username = $instance['adopt_a_codex_username'];
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id('adopt_a_codex_username'); ?>"><?php _e( 'Your Codex or Wordpress.org username:' ); ?>
+			<label for="<?php echo $this->get_field_id('adopt_a_codex_username'); ?>"><?php _e( 'Your Codex or Wordpress.org username:', 'adopt-a-codex-badge' ); ?>
 				<input class="widefat" id="<?php echo $this->get_field_id('adopt_a_codex_username'); ?>" name="<?php echo $this->get_field_name('adopt_a_codex_username'); ?>" type="text" value="<?php echo attribute_escape($adopt_a_codex_username); ?>" />
 			</label>
 		</p>
@@ -66,7 +66,7 @@ class Adopt_A_Codex_Badge extends WP_Widget {
 		<div class="adopt-a-codex-badge-background">
 			<h2><a href="<?php esc_url( printf( 'http://codex.wordpress.org/User:%s', $adopt_a_codex_username ) ); ?>"><?php echo $adopt_a_codex_username; ?></a></h2>
 		</div><br />
-		<?php include_once(ABSPATH.WPINC.'/feed.php'); ?>
+		<?php include_once( ABSPATH.WPINC.'/feed.php' ); ?>
 		<br />
 		<?php
 		$rss = fetch_feed( esc_url( sprintf( 'http://codex.wordpress.org/index.php?title=Special:Contributions&feed=rss&target=%s', $adopt_a_codex_username ) ) );
@@ -77,7 +77,7 @@ class Adopt_A_Codex_Badge extends WP_Widget {
 		?>
 		<ul id="adopt-a-codex-log">
 			<?php if ( 0 == $maxitems ) 
-				echo '<li>' . __( 'I haven\'t had a chance to get started yet.' ) . '</li>';
+				echo '<li>' . __( 'I haven\'t had a chance to get started yet.', 'adopt-a-codex-badge' ) . '</li>';
 	    	else
 	    		// Loop through Codex feed items and display each item as a hyperlink.
     			foreach ( $rss_items as $item ) :
