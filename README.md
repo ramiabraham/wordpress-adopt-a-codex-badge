@@ -1,9 +1,9 @@
-WordPress Adopt-A-Codex Badge
+WordPress Adopt-A-Codex Page Badge
 =============================
 
 Demo: http://make.rami.nu/
 
-Display a simple widget in your sidebar to show your involvement in the WordPress Codex.
+Displays a widget in your sidebar to show your involvement in the WordPress Codex.
 
 A very simple widget that displays a badge in any widgetized area, links to your Codex user page, and your feed of recent
 Codex activity.
@@ -23,6 +23,15 @@ Further ideas:
 
 Changelog:
 =============================
+
+Version 1.2:
+
+*Localization, tweaks
+
+*New badge image
+
+*Additional input field to specify adopted page, else shows the Codex User page.
+
 
 Version 1.1:
 
