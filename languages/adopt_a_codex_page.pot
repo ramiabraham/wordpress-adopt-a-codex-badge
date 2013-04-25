@@ -1,0 +1,32 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Adopt A Codex Badge\n"
+"POT-Creation-Date: 2013-04-25 15:42-0700\n"
+"PO-Revision-Date: 2013-04-25 15:42-0700\n"
+"Last-Translator: \n"
+"Language-Team: ramiabraham\n"
+"Language: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: __;_e;esc_attr__;esc_attr_e;esc_html__;esc_html_e;_x;"
+"_ex;esc_attr_x;esc_html_x;_n;_nx;_n_noop;_nx_noop\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: adopt-a-codex-badge.php:36
+msgid "Shows your involvement in the WordPress Adopt-A-Codex initiative."
+msgstr ""
+
+#: adopt-a-codex-badge.php:45
+msgid "Your Codex or Wordpress.org username:"
+msgstr ""
+
+#: adopt-a-codex-badge.php:76
+msgid "'s recent activity:"
+msgstr ""
+
+#: adopt-a-codex-badge.php:82
+msgid "I haven't had a chance to get started yet."
+msgstr ""

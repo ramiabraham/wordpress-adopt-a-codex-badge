@@ -31,7 +31,9 @@ if ( ! class_exists( 'Adopt_A_Codex_Badge' ) ) {
 class Adopt_A_Codex_Badge extends WP_Widget {
 
 	function Adopt_A_Codex_Badge() {
-		$widget_ops = array( 'classname' => 'Adopt_A_Codex_Badge', 'description' => __( 'Shows your involvement in the WordPress Adopt-A-Codex initiative.', 'adopt-a-codex-badge' ) );
+		load_plugin_textdomain( 'adopt_a_codex_badge', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+
+		$widget_ops = array( 'classname' => 'Adopt_A_Codex_Badge', 'description' => __( 'Shows your involvement in the WordPress Adopt-A-Codex initiative.', 'adopt_a_codex_badge' ) );
 		$this->WP_Widget( 'Adopt_A_Codex_Badge', 'Adopt A Codex Badge', $widget_ops );
 	}
  
@@ -71,13 +73,13 @@ class Adopt_A_Codex_Badge extends WP_Widget {
 		<?php
 		$rss = fetch_feed( esc_url( sprintf( 'http://codex.wordpress.org/index.php?title=Special:Contributions&feed=rss&target=%s', $adopt_a_codex_username ) ) );
 		echo $adopt_a_codex_username;
-		echo'\'s recent activity:';
+		_e( '\'s recent activity:', 'adopt_a_codex_badge' );
 		$maxitems = $rss->get_item_quantity( 5 );
 		$rss_items = $rss->get_items( 0, $maxitems );
 		?>
 		<ul id="adopt-a-codex-log">
 			<?php if ( 0 == $maxitems ) 
-				echo '<li>' . __( 'I haven\'t had a chance to get started yet.', 'adopt-a-codex-badge' ) . '</li>';
+				echo '<li>' . __( 'I haven\'t had a chance to get started yet.', 'adopt_a_codex_badge' ) . '</li>';
 	    	else
 	    		// Loop through Codex feed items and display each item as a hyperlink.
     			foreach ( $rss_items as $item ) :
