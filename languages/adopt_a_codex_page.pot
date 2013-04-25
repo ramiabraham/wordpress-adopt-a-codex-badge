@@ -1,11 +1,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Adopt A Codex Badge\n"
-"POT-Creation-Date: 2013-04-25 15:42-0700\n"
-"PO-Revision-Date: 2013-04-25 15:42-0700\n"
+"POT-Creation-Date: 2013-04-25 15:55-0700\n"
+"PO-Revision-Date: 2013-04-25 15:55-0700\n"
 "Last-Translator: \n"
-"Language-Team: ramiabraham\n"
-"Language: English\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -23,8 +22,9 @@ msgstr ""
 msgid "Your Codex or Wordpress.org username:"
 msgstr ""
 
-#: adopt-a-codex-badge.php:76
-msgid "'s recent activity:"
+#: adopt-a-codex-badge.php:74
+#, php-format
+msgid "%s's recent activity"
 msgstr ""
 
 #: adopt-a-codex-badge.php:82
