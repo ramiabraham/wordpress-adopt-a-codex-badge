@@ -71,9 +71,9 @@ class Adopt_A_Codex_Badge extends WP_Widget {
 		<?php include_once( ABSPATH.WPINC.'/feed.php' ); ?>
 		<br />
 		<?php
+		printf( __( '%s\'s recent activity', 'adopt_a_codex_badge' ), $adopt_a_codex_username );
+
 		$rss = fetch_feed( esc_url( sprintf( 'http://codex.wordpress.org/index.php?title=Special:Contributions&feed=rss&target=%s', $adopt_a_codex_username ) ) );
-		echo $adopt_a_codex_username;
-		_e( '\'s recent activity:', 'adopt_a_codex_badge' );
 		$maxitems = $rss->get_item_quantity( 5 );
 		$rss_items = $rss->get_items( 0, $maxitems );
 		?>
