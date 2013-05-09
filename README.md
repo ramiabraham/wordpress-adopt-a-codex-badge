@@ -1,5 +1,5 @@
-WordPress Adopt-A-Codex Page Badge
-=============================
+WordPress Codex Adopt-A-Page Badge
+==================================
 
 Demo: http://make.rami.nu/
 
