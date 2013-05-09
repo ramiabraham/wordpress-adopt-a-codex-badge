@@ -74,7 +74,7 @@ class Adopt_A_Codex_Badge extends WP_Widget {
 		// Adopt A codex badge image wrapper. Pretty simple but it does the job.
 		?>
 		<div class="adopt-a-codex-badge-background">
-			<h2><a href="<?php esc_url( printf( 'http://codex.wordpress.org/User:%s', $adopt_a_codex_username ) ); ?>"><?php echo $adopt_a_codex_username; ?></a></h2>
+			<h2><a href="<?php esc_url( printf( 'http://profiles.wordpress.org/%s', $adopt_a_codex_username ) ); ?>"><?php echo $adopt_a_codex_username; ?></a></h2>
 		</div>
 			<br />
 			<div class="adopted-codex-page-link">
