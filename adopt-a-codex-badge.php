@@ -34,9 +34,9 @@ class Adopt_A_Codex_Badge extends WP_Widget {
 	public $adopted_codex_page;
 
 	function Adopt_A_Codex_Badge() {
-		load_plugin_textdomain( 'adopt_a_codex_badge', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+		load_plugin_textdomain( 'adopt-a-codex-badge', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
-		$widget_ops = array( 'classname' => 'Adopt_A_Codex_Badge', 'description' => __( 'Shows your involvement in the WordPress Codex Adopt-A-Page initiative.', 'adopt_a_codex_badge' ) );
+		$widget_ops = array( 'classname' => 'Adopt_A_Codex_Badge', 'description' => __( 'Shows your involvement in the WordPress Codex Adopt-A-Page initiative.', 'adopt-a-codex-badge' ) );
 		$this->WP_Widget( 'Adopt_A_Codex_Badge', 'WordPress Codex Adopt-A-Page', $widget_ops );
 	}
  
@@ -47,11 +47,11 @@ class Adopt_A_Codex_Badge extends WP_Widget {
 		$this->adopted_codex_page = $instance['adopted_codex_page'];
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'adopt_a_codex_username' ); ?>"><?php _e( 'Your Codex or Wordpress.org username:', 'adopt_a_codex_badge' ); ?>
+			<label for="<?php echo $this->get_field_id( 'adopt_a_codex_username' ); ?>"><?php _e( 'Your Codex or Wordpress.org username:', 'adopt-a-codex-badge' ); ?>
 				<input class="widefat" id="<?php echo $this->get_field_id( 'adopt_a_codex_username' ); ?>" name="<?php echo $this->get_field_name( 'adopt_a_codex_username' ); ?>" type="text" value="<?php echo esc_attr( $this->adopt_a_codex_username ); ?>" />
 			</label>
 					<br /><br />
-			<label for="<?php echo $this->get_field_id( 'adopted_codex_page' ); ?>"><?php _e( 'The page you are working on:', 'adopt_a_codex_badge' ); ?>
+			<label for="<?php echo $this->get_field_id( 'adopted_codex_page' ); ?>"><?php _e( 'The page you are working on:', 'adopt-a-codex-badge' ); ?>
 				<input class="widefat" id="<?php echo $this->get_field_id( 'adopted_codex_page' ); ?>" name="<?php echo $this->get_field_name( 'adopted_codex_page' ); ?>" type="text" value="<?php echo $this->adopted_codex_page; ?>" />
 			</label>
 			
@@ -89,7 +89,7 @@ class Adopt_A_Codex_Badge extends WP_Widget {
 
 			<?php include_once( ABSPATH . WPINC . '/feed.php' ); ?>
 				<div class="adopt-a-codex-log-container"><h3><?php
-			printf( __( '%s\'s recent activity:', 'adopt_a_codex_badge' ), $this->adopt_a_codex_username );
+			printf( __( '%s\'s recent activity:', 'adopt-a-codex-badge' ), $this->adopt_a_codex_username );
 				?></h3><?php
 			$rss = fetch_feed( esc_url( sprintf( 'http://codex.wordpress.org/index.php?title=Special:Contributions&feed=rss&target=%s', $this->adopt_a_codex_username ) ) );
 			$maxitems = $rss->get_item_quantity( 5 );
@@ -97,7 +97,7 @@ class Adopt_A_Codex_Badge extends WP_Widget {
 			?>
 					<ul id="adopt-a-codex-log">
 				<?php if ( 0 == $maxitems ) 
-					echo '<li>' . __( 'I haven\'t had a chance to get started yet.', 'adopt_a_codex_badge' ) . '</li>';
+					echo '<li>' . __( 'I haven\'t had a chance to get started yet.', 'adopt-a-codex-badge' ) . '</li>';
 		    	else
 		    		// Loop through Codex feed items and display each item as a hyperlink.
 	    			foreach ( $rss_items as $item ) :
