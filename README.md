@@ -21,6 +21,13 @@ Further ideas:
 
 *Option to disable feed
 
+Contributors:
+=============================
+
+Rami Abraham
+Siobhan P. McKeown
+Drew Jaynes
+
 Changelog:
 =============================
 
