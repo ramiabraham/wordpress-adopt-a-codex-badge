@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: wordpress-adopt-a-codex-badge\n"
-"POT-Creation-Date: 2013-05-04 23:24-0500\n"
-"PO-Revision-Date: 2013-05-04 23:25-0500\n"
+"Project-Id-Version: Adopt a Codex Page\n"
+"POT-Creation-Date: 2013-05-10 17:21-0700\n"
+"PO-Revision-Date: 2013-05-10 17:39-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -12,25 +12,30 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;esc_attr__;esc_attr_e;esc_attr_html__;_x;_ex;"
 "esc_attr_x;esc_html_x;_n;;_nx;_n_noop;_nx_noop\\n\n"
 "X-Poedit-Basepath: ../\n"
+"Language: English\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: adopt-a-codex-badge.php:36
+#: adopt-a-codex-badge.php:39
 msgid "Shows your involvement in the WordPress Codex Adopt-A-Page initiative."
 msgstr ""
 
-#: adopt-a-codex-badge.php:47
+#: adopt-a-codex-badge.php:50
 msgid "Your Codex or Wordpress.org username:"
 msgstr ""
 
-#: adopt-a-codex-badge.php:51
+#: adopt-a-codex-badge.php:54
 msgid "The page you are working on:"
 msgstr ""
 
 #: adopt-a-codex-badge.php:86
+msgid "My Adopted Page"
+msgstr ""
+
+#: adopt-a-codex-badge.php:92
 #, php-format
 msgid "%s's recent activity:"
 msgstr ""
 
-#: adopt-a-codex-badge.php:94
+#: adopt-a-codex-badge.php:100
 msgid "I haven't had a chance to get started yet."
 msgstr ""
