@@ -1,8 +1,6 @@
 WordPress Codex Adopt-A-Page Badge
 ==================================
 
-Demo: http://make.rami.nu/
-
 Displays a widget in your sidebar to show your involvement in the WordPress Codex.
 
 A very simple widget that displays a badge in any widgetized area, links to your Codex user page, and your feed of recent
